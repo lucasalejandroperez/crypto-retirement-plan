@@ -1,0 +1,14 @@
+@import '../../../../styles/calc';
+
+.transaction-sent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: rem(20px);
+
+  div:first-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

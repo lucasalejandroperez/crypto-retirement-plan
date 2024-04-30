@@ -1,0 +1,25 @@
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 15px;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="%23007BFF" d="M5 8l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+
+  &:focus {
+    border-color: dodgerblue;
+    box-shadow: 0 0 8px 0 rgba(30, 136, 229, 0.4);
+  }
+
+  &:hover {
+    border-color: #777;
+  }
+}

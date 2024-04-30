@@ -1,0 +1,10 @@
+@import '../../styles/color';
+
+.gradient-line {
+  background: radial-gradient(39.84% 47.5% at 96.82% 58.33%, $blue-light-color 0%, $blue-primary-color 100%);
+  border-radius: 9999px;
+  width: 24px;
+  height: 1px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}

@@ -1,0 +1,213 @@
+@import '../../styles/color';
+@import '../../styles/calc';
+
+.navbar {
+  $blockname: navbar;
+  position: fixed;
+  width: 100%;
+  height: rem(78px);
+  transition: 0.5s ease-in-out;
+  z-index: 5;
+
+  &--background-transparent {
+    background-color: transparent;
+  }
+
+  &--background-fill {
+    background-color: $app-background-color;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+
+    .navbar__logo {
+      margin-left: rem(16px);
+      z-index: 99;
+    }
+
+    .navbar__mobile-icon {
+      display: flex;
+      align-items: center;
+      z-index: 99;
+
+      svg {
+        fill: $white-primary-color;
+        margin-right: rem(8px);
+      }
+    }
+
+    .navbar__items-container {
+      background-color: $app-background-color;
+      display: flex;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 0;
+      gap: rem(20px);
+
+      left: -100%;
+      transition: 0.5s all ease;
+
+      &.isOpen {
+        left: 0;
+        transition: 0.5s all ease;
+      }
+
+      .navbar__item-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: rem(50px);
+
+        .navbar__item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          height: 100%;
+          cursor: pointer;
+          transition: 0.5s all ease;
+
+          &.active-link {
+            a {
+              color: $cyan-dark-color;
+            }
+          }
+
+          a {
+            font-family: 'Space Grotesk', sans-serif;
+            font-style: normal;
+            font-weight: 200;
+            font-size: rem(12px);
+            line-height: rem(16px);
+            text-align: center;
+            text-decoration: none;
+            color: $white-primary-color;
+            text-transform: uppercase;
+
+            // Line Effect
+            display: inline-block;
+            position: relative;
+
+            &::after {
+              content: '';
+              position: absolute;
+              width: 100%;
+              transform: scaleX(0);
+              height: rem(2px);
+              bottom: rem(-4px);
+              left: 0;
+              background: linear-gradient(
+                270deg,
+                $pink-primary-color 33.07%,
+                $blue-primary-color 66.67%,
+                $violet-light-color 100%
+              );
+              transform-origin: bottom left;
+              transition: transform 0.25s ease-out;
+            }
+
+            &:hover::after {
+              transform: scaleX(1);
+              transform-origin: bottom left;
+            }
+          }
+
+          .navbar__address {
+            display: flex;
+            align-items: center;
+            gap: rem(8px);
+            padding: rem(12px);
+            color: $pink-primary-color;
+            font-weight: 600;
+            cursor: auto;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 992px) {
+      flex-wrap: initial;
+
+      .navbar__logo {
+        cursor: pointer;
+        margin-left: rem(40px);
+
+        img {
+          margin-right: rem(8px);
+        }
+      }
+
+      .navbar__mobile-icon {
+        display: none;
+      }
+
+      .navbar__items-container {
+        height: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: rem(30px);
+        list-style: none;
+        padding-right: rem(16px);
+        position: initial;
+        background: transparent;
+
+        .navbar__item-container {
+          height: 100%;
+          width: initial;
+
+          .navbar__item {
+            &:hover {
+              background-color: transparent;
+              transition: 0.5s all ease;
+              a {
+                color: $white-light-color;
+              }
+            }
+
+            a {
+              font-size: rem(12px);
+            }
+
+            button {
+              font-size: rem(12px);
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .navbar__logo {
+        margin-left: rem(80px);
+      }
+
+      .navbar__items-container {
+        gap: rem(40px);
+
+        .navbar__item-container {
+          .navbar__item {
+            a {
+              font-size: rem(14px);
+            }
+
+            button {
+              font-size: rem(14px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

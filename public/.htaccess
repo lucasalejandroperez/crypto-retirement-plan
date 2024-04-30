@@ -1,0 +1,11 @@
+RewriteEngine On
+# Redirige las solicitudes HTTP a HTTPS (opcional, quitar si no se necesita)
+# RewriteCond %{HTTPS} !=on
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# No redirigir si la solicitud es para un archivo estático (archivos o directorios que existen)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirigir todas las demás solicitudes a index.html
+RewriteRule ^ index.html [L]

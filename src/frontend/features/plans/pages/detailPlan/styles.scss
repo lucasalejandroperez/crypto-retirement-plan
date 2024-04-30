@@ -1,0 +1,45 @@
+@import '../../../../styles/calc';
+
+.detail-plan {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20px);
+
+  .heir {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(20px);
+    align-items: center;
+    border-radius: rem(10px);
+    padding: rem(10px);
+
+    position: relative;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    color: #c5f1f3;
+    background: linear-gradient(162deg, rgba(59, 208, 216, 0.08) 28.7%, rgba(59, 208, 216, 0));
+    isolation: isolate;
+
+    .name-address {
+      display: flex;
+      flex-direction: column;
+
+      .address {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: rem(200px);
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .heir {
+      .name-address {
+        .address {
+          width: initial;
+        }
+      }
+    }
+  }
+}

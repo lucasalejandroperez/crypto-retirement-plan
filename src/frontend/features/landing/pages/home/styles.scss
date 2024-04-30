@@ -1,0 +1,238 @@
+@import '../../../../styles/color.scss';
+@import '../../../../styles/calc';
+
+.main-section {
+  display: grid;
+  place-items: center;
+
+  .main-section-image {
+    grid-area: 1/1;
+    width: rem(374px);
+    padding: rem(20px);
+  }
+
+  .content-container {
+    padding: rem(20px);
+    grid-area: 1/1;
+    text-align: center;
+
+    .title {
+      margin-bottom: rem(20px);
+      font-size: rem(25px);
+      line-height: rem(30px);
+      color: $white-light-color;
+      font-weight: 300;
+
+      span {
+        color: transparent;
+        background: radial-gradient(circle at right top, rgb(57, 208, 216), rgb(43, 106, 255));
+        font-size: rem(25px);
+        font-weight: 700;
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+    }
+
+    .subtitle {
+      color: rgb(173 198 255/1);
+      font-weight: 400;
+      padding: 0 rem(5px);
+      font-size: rem(16px);
+      word-wrap: break-word;
+      display: block;
+      inline-size: rem(330px);
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      gap: rem(15px);
+      margin-top: rem(30px);
+      margin-bottom: rem(36px);
+    }
+
+    .content-footer {
+      color: $violet-light-color;
+      font-size: rem(16px);
+      font-weight: 200;
+
+      span {
+        color: $white-primary-color;
+        font-size: rem(12px);
+        font-weight: 600;
+        letter-spacing: rem(2px);
+        padding-bottom: rem(4px);
+        padding-left: rem(3px);
+
+        background: linear-gradient(to left, rgba(98, 190, 150, 1) 0%, rgba(172, 2, 153, 1) 100%) left bottom
+          transparent no-repeat;
+        background-size: 100% rem(1px);
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .main-section-image {
+      width: rem(744px);
+      height: rem(670px);
+    }
+
+    .content-container {
+      .title {
+        font-size: rem(64px);
+        line-height: rem(70px);
+
+        span {
+          font-size: rem(64px);
+          font-weight: 700;
+        }
+      }
+
+      .subtitle {
+        font-size: rem(20px);
+        line-height: rem(24px);
+        display: initial;
+        inline-size: initial;
+      }
+
+      .content-footer {
+        font-size: rem(20px);
+
+        span {
+          font-size: rem(16px);
+        }
+      }
+    }
+  }
+}
+
+.plans-section {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  border-radius: rem(40px);
+  background: radial-gradient(at center top, transparent 20%, hsl(245, 60%, 16%, 0.2)),
+    url('../../../../assets/home/home-page-section1-light.webp'), $blue-dark-color;
+  box-shadow: 8px 8px 10px rgb(20 16 65 / 5%), -8px -8px 10px rgb(197 191 255 / 5%),
+    inset 0 6px 20px rgb(197 191 255 / 20%), inset 0 -1px 25px rgb(197 191 255 / 10%);
+  background-size: 100% 100%;
+  margin: 0 rem(20px);
+  padding: rem(32px);
+
+  .card-background {
+    background: linear-gradient(
+      245.22deg,
+      $pink-primary-color 7.97%,
+      $blue-primary-color 49.17%,
+      $blue-light-color 92.1%
+    );
+    mask-image: url('../../../../assets/home/home-bg-element-2.png');
+    -webkit-mask-image: url('../../../../assets/home/home-bg-element-2.png');
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    text-align: center;
+    opacity: 0.3;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .card-title {
+    text-align: center;
+    margin-bottom: rem(32px);
+
+    span {
+      font-size: rem(18px);
+      line-height: rem(28px);
+    }
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: rem(20px);
+  }
+
+  @media (min-width: 768px) {
+    max-width: rem(1128px);
+
+    .cards-container {
+      flex-direction: row;
+    }
+  }
+
+  @media (min-width: 1185px) {
+    margin: 0 auto;
+  }
+}
+
+.why-eth-section {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  justify-content: center;
+  overflow-x: hidden;
+
+  > * {
+    grid-area: 1/1;
+    overflow: auto;
+  }
+
+  .bg {
+    background: url('../../../../assets/home/home-bg-why-ethereum-mobile.png') 0% 0% / 100% 100%;
+    width: 100vw;
+    height: 100%;
+  }
+
+  .container {
+    margin: rem(112px) 0 rem(176px) 0;
+    padding: 0 rem(32px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .gradient-line-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .title {
+      font-size: rem(18px);
+    }
+
+    .boxes {
+      margin-top: rem(32px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: rem(24px);
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .bg {
+      background: url('../../../../assets/home/home-bg-why-ethereum.png') 0% 0% / 100% 100%;
+    }
+
+    .container {
+      margin: rem(112px) rem(64px) rem(176px) rem(64px);
+      padding: 0 rem(56px);
+
+      .boxes {
+        flex-direction: row;
+        justify-content: center;
+        max-width: 100%;
+      }
+    }
+  }
+}

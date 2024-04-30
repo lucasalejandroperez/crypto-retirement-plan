@@ -1,0 +1,45 @@
+@import './frontend/styles/color';
+
+* {
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: $app-background-color;
+  color: $white-primary-color;
+}
+
+button {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.app {
+  background-color: $app-background-color;
+  background-image: url('./frontend/assets/home/home-page-bg-lights.webp');
+  background-size: 100% 95%;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  display: flow-root;
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(34, 14, 99, 0.63) !important;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px $scrollbar-shadow-color;
+  background-color: $app-background-color;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px $scrollbar-shadow-color;
+  background-color: $scrollbar-thumb-color;
+}

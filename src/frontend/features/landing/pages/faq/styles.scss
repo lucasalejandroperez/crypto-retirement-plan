@@ -1,0 +1,21 @@
+@import '../../../../styles/color.scss';
+@import '../../../../styles/calc.scss';
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  padding: rem(20px) rem(20px) rem(40px) rem(20px);
+  gap: rem(20px);
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    color: $blue-ultra-light-color;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+}

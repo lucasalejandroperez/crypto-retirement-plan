@@ -1,0 +1,69 @@
+@import '../../../../styles/color.scss';
+@import '../../../../styles/calc';
+
+.add-heir-modal {
+  display: flex;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  width: 90vw;
+  position: relative;
+  border-radius: rem(40px);
+  background: radial-gradient(at center top, transparent 20%, hsl(245, 60%, 16%, 0.2)),
+    url('../../../../assets/home/home-page-section1-light.webp'), $blue-dark-color;
+  box-shadow: 8px 8px 10px rgb(20 16 65 / 5%), -8px -8px 10px rgb(197 191 255 / 5%),
+    inset 0 6px 20px rgb(197 191 255 / 20%), inset 0 -1px 25px rgb(197 191 255 / 10%);
+  background-size: 100% 100%;
+  margin: 0 rem(20px);
+  margin-left: rem(20px);
+  margin-right: rem(20px);
+  padding: rem(32px);
+
+  h2 {
+    padding-bottom: rem(20px);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20px);
+    z-index: 999;
+
+    .field-container {
+      display: flex;
+      flex-direction: column;
+      gap: rem(10px);
+    }
+  }
+
+  .buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: rem(10px);
+    margin-top: rem(20px);
+  }
+
+  .background {
+    background: linear-gradient(
+      245.22deg,
+      $pink-primary-color 7.97%,
+      $blue-primary-color 49.17%,
+      $blue-light-color 92.1%
+    );
+    mask-image: url('../../../../assets/home/home-bg-element-2.png');
+    -webkit-mask-image: url('../../../../assets/home/home-bg-element-2.png');
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    text-align: center;
+    opacity: 0.3;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  @media (min-width: 768px) {
+    width: 50vw;
+  }
+}

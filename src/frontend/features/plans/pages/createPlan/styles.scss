@@ -1,0 +1,89 @@
+@import '../../../../styles/color.scss';
+@import '../../../../styles/calc';
+
+.create-plan {
+  display: flex;
+  flex-direction: column;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20px);
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      gap: rem(10px);
+    }
+
+    .field-container {
+      display: flex;
+      flex-direction: column;
+
+      input,
+      select {
+        width: 80vw;
+      }
+    }
+
+    .heir-container {
+      display: flex;
+      flex-direction: column;
+
+      .heir {
+        align-items: center;
+        border-radius: rem(10px);
+        padding: rem(10px);
+
+        position: relative;
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+        color: #c5f1f3;
+        background: linear-gradient(162deg, rgba(59, 208, 216, 0.08) 28.7%, rgba(59, 208, 216, 0));
+        isolation: isolate;
+
+        .name-address {
+          display: flex;
+          flex-direction: column;
+
+          .address-container {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: rem(200px);
+          }
+        }
+      }
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      padding-top: rem(20px);
+    }
+  }
+
+  @media (min-width: 768px) {
+    form {
+      .field-container {
+        flex-direction: row;
+        align-items: center;
+
+        input,
+        select {
+          width: rem(150px);
+        }
+      }
+
+      .heir-container {
+        .heir {
+          .name-address {
+            .address-container {
+              width: initial;
+            }
+          }
+        }
+      }
+    }
+  }
+}

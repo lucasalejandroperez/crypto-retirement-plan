@@ -1,0 +1,11 @@
+.withdraw-owner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+}

@@ -1,0 +1,43 @@
+@import '../../../../styles/color.scss';
+@import '../../../../styles/calc';
+
+.add-deposit {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20px);
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      display: flex;
+      gap: rem(20px);
+    }
+
+    .amount-container {
+      display: flex;
+      align-items: center;
+
+      div {
+        width: 100%;
+      }
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      padding-top: rem(20px);
+    }
+  }
+
+  @media (min-width: 768px) {
+    form {
+      div {
+        input {
+          width: initial;
+        }
+      }
+    }
+  }
+}

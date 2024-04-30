@@ -1,0 +1,24 @@
+@import '../../styles/color';
+
+.input {
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+
+  &:focus {
+    border-color: $blue-light-color;
+    box-shadow: 0 0 8px 0 rgba(30, 136, 229, 0.4);
+  }
+}

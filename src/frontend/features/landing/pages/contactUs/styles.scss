@@ -1,0 +1,63 @@
+@import '../../../../styles/color.scss';
+@import '../../../../styles/calc';
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  padding: rem(20px) rem(20px) rem(40px) rem(20px);
+  gap: rem(20px);
+
+  h1 {
+    text-align: center;
+  }
+
+  h2 {
+    color: $blue-ultra-light-color;
+  }
+
+  .mail-link {
+    display: flex;
+    flex-direction: column;
+    gap: rem(5px);
+
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: $white-primary-color;
+      gap: rem(5px);
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: $cyan-dark-color;
+      }
+    }
+  }
+
+  .social-link {
+    align-items: center;
+    gap: rem(5px);
+
+    a {
+      display: inline-flex;
+      color: $white-primary-color;
+      gap: rem(5px);
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: $cyan-dark-color;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .mail-link {
+      flex-direction: row;
+      align-items: center;
+
+      a {
+        display: inline-flex;
+      }
+    }
+  }
+}
